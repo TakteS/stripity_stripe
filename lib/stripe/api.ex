@@ -49,6 +49,9 @@ defmodule Stripe.API do
         # use an empty string and let Stripe produce an error
         ""
 
+      {:system, key} ->
+        System.get_env(key)
+
       key ->
         key
     end
